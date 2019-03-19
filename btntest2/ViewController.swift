@@ -14,7 +14,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    @IBOutlet weak var lbla: UILabel!
+    var toggle = true
 
-
+    @IBAction func btna(_ sender: Any) {
+        lbla.text = "하하"
+    }
+    
+    @IBAction func btnb(_ sender: Any) {
+        lbla.text = " "
+        
+    }
+    
+    @IBAction func ch(_ sender: Any) {
+        if(toggle == true){
+             self.view.backgroundColor = UIColor.yellow
+            toggle = false
+        }
+        else{
+             self.view.backgroundColor = UIColor.white
+            toggle = true
+        }
+    }
+    
+    
 }
 
